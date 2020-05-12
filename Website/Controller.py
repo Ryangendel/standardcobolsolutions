@@ -6,12 +6,13 @@ from flask import Flask, render_template
 
 app = Flask(__name__)
 
-viewDirectory = "./Views/"
+viewDirectory = "Views/"
 
 @app.route("/")
 def home():
-    return render_template(f"{viewDirectory}index.html")
+    return render_template("index.html")
+    # return "Hello"
 
 @app.route("/Services")
 def services():
-    return render_template(f"{viewDirectory}services.html")
+    return render_template("services.html")
